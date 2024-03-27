@@ -4,7 +4,7 @@ import { stringify } from 'qs'
 
 
 
-const adjustQueryParams = (args: unknown) => stringify({...(args || {}), language: 'en'})
+const adjustQueryParams = (args: unknown) => stringify({...(args || {}), language: 'en', apiKey: import.meta.env.VITE_NEWSAPI_APIKEY})
 
 export const newsApi = createApi({
   reducerPath: 'newsApi',
